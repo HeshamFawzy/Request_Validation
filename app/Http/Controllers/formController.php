@@ -14,6 +14,6 @@ class formController extends Controller
 
     public function store(StoreFormValidation $request)
     {
-        
+        return "thank you for Submit";
     }
 }

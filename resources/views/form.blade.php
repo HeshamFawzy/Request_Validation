@@ -10,15 +10,10 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
-<body>
-    <div class="container">
+<body class="vh-100">
+    <div class="container p-5">
         <div class="row justify-content-center">
             <div class="col-lg-offset-4 col-lg-4">
-                @if (count($errors) > 0)
-                    @foreach ($errors->all() as $error)
-                        <p class="alert alert-danger">{{$error}}</p>
-                    @endforeach     
-                @endif
                 <form action="" method="post">
                     @csrf
                     <div class="form-group">
@@ -37,6 +32,12 @@
 
                     <button type="submit" class="btn btn-success">Submit</button>
                 </form>
+                <br>
+                @if (count($errors) > 0)
+                @foreach ($errors->all() as $error)
+                <p class="alert alert-danger">{{$error}}</p>
+                @endforeach
+                @endif
             </div>
         </div>
     </div>

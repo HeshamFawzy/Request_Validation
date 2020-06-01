@@ -32,10 +32,10 @@ class StoreFormValidation extends FormRequest
     public function messages()
     {
         return [
-            'name.required'  => 'name is also required',
-            'name.max'  => 'name is not more than 20 char',
+            'name.required'  => 'name is required',
+            'name.max'  => 'name must not more than 20 char',
             'email.required'  => 'email is also required',
-            'email.max'  => 'email is not more than 35 char',
+            'email.max'  => 'email must not more than 35 char',
         ];
     }
 }
